@@ -1,0 +1,114 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<main id="main">
+    @model ContactModel
+    <!-- ======= Intro Single ======= -->
+    <section class="intro-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8">
+                    <div class="title-single-box">
+                        <h1 class="title-single">Свяжитесь с нами</h1>
+                        <span class="color-text-a">Задайте интересующий вас вопрос, или свяжитесь с нами</span>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a asp-action="Index" asp-controller="Home">Главная</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Контакты
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Intro Single-->
+    <!-- ======= Contact Single ======= -->
+    <section class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="contact-map box">
+                        <div id="map" class="contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1121.4694410808577!2d49.140956125266314!3d55.79429916411206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead6d9b0a6a3f%3A0x6ba76ff6e89e85fd!2z0JrQndCY0KLQoyDQmtC-0YDQv9GD0YEgItCRIiAi0JIiICLQniI!5e0!3m2!1sru!2sru!4v1681132459828!5m2!1sru!2sru" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 section-t8">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <form asp-controller="Contact">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Ваше имя" asp-for="Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Ваш Email" asp-for="Mail" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control" cols="45" rows="8" placeholder="Ваш вопрос" required asp-for="Ask"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-a">Отправить</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-5 section-md-t3">
+                            <div class="icon-box section-b2">
+                                <div class="icon-box-icon">
+                                    <span class="bi bi-envelope"></span>
+                                </div>
+                                <div class="icon-box-content table-cell">
+                                    <div class="icon-box-title">
+                                        <h4 class="icon-title">Контакты</h4>
+                                    </div>
+                                    <div class="icon-box-content">
+                                        <p class="mb-1">
+                                            Email.
+                                            <span class="color-a">contact@example.com</span>
+                                        </p>
+                                        <p class="mb-1">
+                                            Телефон.
+                                            <span class="color-a">+7 999 999 99-99</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="icon-box section-b2">
+                                <div class="icon-box-icon">
+                                    <span class="bi bi-geo-alt"></span>
+                                </div>
+                                <div class="icon-box-content table-cell">
+                                    <div class="icon-box-title">
+                                        <h4 class="icon-title">Наш адрес</h4>
+                                    </div>
+                                    <div class="icon-box-content">
+                                        <p class="mb-1">
+                                            Россия, Республика Татарстан, г.Казань, ул. Карла Маркса, 72, 420015
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Contact Single-->
+
+</main><!-- End #main -->
